@@ -2,6 +2,15 @@
   <head>
     <title> Web Guesser </title>
     <style>
+      body {
+      <% if message == "Way too high!" || message == "Way too low!" %>
+        background: indianred;
+      <% elsif message == "Too high!" || message == "Too low!" %>
+        background: #ff9ca5;
+      <% else %>
+        background: lightseagreen;
+      <% end %>
+      }
     </style>
   </head>
   <boby> <h2>Web Guesser</h2>
@@ -10,9 +19,13 @@
       <input type="submit" value="Guess!" />
     </form>
     <p>
+      The SECRET NUMBER is <%= number %>
+    </p>
+    <p>
       <%= message %>
     </p>
   </boby>
 </html>
+
 
 
